@@ -1,0 +1,78 @@
+<!--div class="row row-fluid clearfix mbf">
+    <div class="span7">
+    <video-detail *ngIf="selectedVideo" [video]="selectedVideo" ></video-detail>
+  </div>
+  <div class="span5">
+    <video-list (SelectVideo)="onSelectVideo($event)" [videos]="videos"></video-list>
+  </div>
+</div-->
+<link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap.min.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap-responsive.min.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../../assets/styles/style.css" id="dark" media="screen" />
+<link rel="stylesheet" type="text/css" href="../../assets/js/rs-plugin/css/settings.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../../assets/styles/icons/icons.css" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<style>
+  h4 {
+    color:black !important;
+  }
+  .videoCenter{
+    max-width: 1229px !important;
+    width:auto !important;
+  }
+</style>
+<div class="page-content">
+    
+    <div class="row row-fluid clearfix mbf videoCenter">
+        <div class="span7">
+          <div class="def-block">
+            <h4> Latest News </h4><span class="liner"></span>
+
+            <video-detail *ngIf="selectedVideo" [video]="selectedVideo" ></video-detail>
+
+           
+          </div><!-- def block -->
+        </div><!-- span8 news -->
+        <div class="span5">
+            <div class="def-block">
+              <h4> Lists </h4><span class="liner"></span>
+  
+              <video-list (SelectVideo)="onSelectVideo($event)" [videos]="videos"></video-list>
+            </div><!-- def block -->
+          </div><!-- span8 news -->
+      </div>
+    </div>
+    <script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/theme20.js"></script>
+    <script type="text/javascript" src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>	
+    <script type="text/javascript" src="../../assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.jplayer.js"></script>
+    <script type="text/javascript" src="../../assets/js/ttw-music-player-min.js"></script> 
+    <script type="text/javascript" src="../../assets/js/countdown.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/custom.js"></script>
+    <script type="text/javascript">	
+    /* <![CDATA[ */
+      jQuery(document).ready(function() {
+        jQuery('.tp-banner').revolution({
+          delay:9000,
+          startwidth:1060,
+          startheight:610,
+          hideThumbs:10,
+          navigationType:"off",
+          fullWidth:"on",
+          forceFullWidth:"on"
+        });
+        jQuery("#event1").countdown({
+          date: "31 December 2017 23:59:59",
+          format: "on"
+        },
+        function() {
+          // callback function
+        });
+      });
+    /* ]]> */
+    </script> 
