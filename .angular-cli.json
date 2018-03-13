@@ -19,7 +19,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "assets/bootstrap/css/bootstrap.min.css" 
+        ,"assets/bootstrap/css/bootstrap-responsive.min.css" 
+        ,"assets/styles/style.css" 
+        ,"assets/js/rs-plugin/css/settings.css" 
+        ,"assets/styles/icons/icons.css" 
       ],
       "scripts": [
         "assets/js/jquery.min.js"                                   
