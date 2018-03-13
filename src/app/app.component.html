@@ -1,141 +1,112 @@
+<div id="layout" class="full">
 
-
-<!--nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Video Player</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a routerLink="/home" routerLinkActive="active">Home</a> </li>
-      <li><a routerLink="/videos" routerLinkActive="active">Playlist</a></li>
-    </ul>
-  </div>
-</nav-->
-<!DOCTYPE html>
-<!--[if IE 7 ]><html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="en-US"> <![endif]-->
-<!--[if (gte IE 10)|!(IE)]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-<!--<![endif]-->
-
-<!-- Mirrored from d.theme20.com/remix_html/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Mar 2018 18:53:18 GMT -->
-<head>
-	<title>Remix - Music & Band Site Template HTML5 and CSS3</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<!-- Seo Meta -->
-		<meta name="description" content="Remix - Music & Band Site Template HTML5 and CSS3">
-		<meta name="keywords" content="remix, music, light, dark, themeforest, multi purpose, band, css3, html5">
-		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-		<link rel="shortcut icon" href="images/favicon.ico">
-		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-</head>
-<body id="fluidGridSystem">
-	<div id="layout" class="full">
-		<!-- popup login -->
-			<div id="popupLogin">
-				<div class="def-block widget">
-					<h4> Sign In </h4><span class="liner"></span>
-					<div class="widget-content row-fluid">
-						<form id="popup_login_form">
-							<input type="text" name="login_username" id="login_username" onfocus="if (this.value=='username') this.value = '';" onblur="if (this.value=='') this.value = 'username';" value="username" placeholder="username">
-							<input type="password" name="login_password" id="login_password" onfocus="if (this.value=='password') this.value = '';" onblur="if (this.value=='') this.value = 'password';" value="password" placeholder="password">
-							<a href="#" class="tbutton small"><span>Sign In</span></a>
-							<a href="#" class="tbutton color2 small"><span>Register</span></a>
-						</form><!-- login form -->
-					</div><!-- content -->
-				</div><!-- widget -->
-				<div id="popupLoginClose">x</div>
-			</div><!-- popup login -->
-			<div id="LoginBackgroundPopup"></div>
-		<!-- popup login -->
-
-		<header id="header" class="glue">
-      <div class="row clearfix">
-          <div class="little-head" style="width:50%;">
-            <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Sign In</span></div>
-  
-            <div class="search" style="width:80%;">
-              <form action="http://d.theme20.com/remix_html/search.html" id="search" method="get">
-                <input id="inputhead" name="search" type="text" onfocus="if (this.value=='Rechercher') this.value = '';" onblur="if (this.value=='') this.value = 'Rechercher';" value="Rechercher" placeholder="Rechercher" style="width:100%;">
-                <button type="submit"><i class="icon-search"></i></button>
-              </form><!-- end form -->
-            </div><!-- search -->
-          </div><!-- little head -->
-        </div><!-- row -->
-
-			<div class="headdown">
-				<div class="row clearfix">
-					<div class="logo bottomtip" title="Best and Most Popular Musics">
-						<a href="#"><img src="../../assets/images/logo.png" alt="Best and Most Popular Musics"></a>
-					</div><!-- end logo -->
-
-					<nav>
-						<ul class="sf-menu">
-                <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-                <li><a routerLink="/videos" routerLinkActive="active">Video</a></li>
-				<li><a href="index-2.html">Features<span class="sub">remix all features</span></a></li>
-						</ul><!-- end menu -->
-					</nav><!-- end nav -->
-				</div><!-- row -->
-			</div><!-- headdown -->
-		</header><!-- end header -->
-</div>
-<div id="layout" class="full"> 
-		<div class="sliderr">
-				<div class="tp-banner-container">
-					<div class="tp-banner" >
-								<img src="../../assets/images/slides/slider1.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-						<div class="tp-bannertimer"></div>										
-					</div>					
+	<header id="header" class="glue">
+		<div class="row clearfix">
+			<div class="little-head" style="width:50%;">
+				<div id="Login_PopUp_Link" class="sign-btn tbutton small">
+					<a routerLink="/login" routerLinkActive="active"> Login </a>
 				</div>
+				
+
+				<div class="search" style="width:80%;">
+					<form action="http://d.theme20.com/remix_html/search.html" id="search" method="get">
+						<input id="inputhead" name="search" type="text" onfocus="if (this.value=='Rechercher') this.value = '';" onblur="if (this.value=='') this.value = 'Rechercher';"
+						 value="Rechercher" placeholder="Rechercher" style="width:100%;">
+						<button type="submit">
+							<i class="icon-search"></i>
+						</button>
+					</form>
+					<!-- end form -->
+				</div>
+				<!-- search -->
 			</div>
-    <router-outlet></router-outlet> 
+			<!-- little head -->
+		</div>
+		<!-- row -->
+
+		<div class="headdown">
+			<div class="row clearfix">
+				<div class="logo bottomtip" title="Best and Most Popular Musics">
+					<a href="#">
+						<img src="../../assets/images/logo.png" alt="Best and Most Popular Musics">
+					</a>
+				</div>
+				<!-- end logo -->
+
+				<nav>
+					<ul class="sf-menu">
+						<li>
+							<a routerLink="/home" routerLinkActive="active">Home</a>
+						</li>
+						<li>
+							<a routerLink="/videos" routerLinkActive="active">Video</a>
+						</li>
+						<li>
+							<a href="index-2.html">Features
+								<span class="sub">remix all features</span>
+							</a>
+						</li>
+					</ul>
+					<!-- end menu -->
+				</nav>
+				<!-- end nav -->
+			</div>
+			<!-- row -->
+		</div>
+		<!-- headdown -->
+	</header>
+	<!-- end header -->
+</div>
+<div id="layout" class="full">
+	<div class="sliderr">
+		<div class="tp-banner-container">
+			<div class="tp-banner">
+				<img src="../../assets/images/slides/slider1.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+				<div class="tp-bannertimer"></div>
+			</div>
+		</div>
+	</div>
+	<router-outlet></router-outlet>
 </div>
 <footer id="footer">
 	<div class="footer-last">
 		<div class="row clearfix">
-			<span class="copyright">© 2013 by <a href="http://theme20.com/">Theme20</a>. All Rights Reserved. Powered by <a href="http://themeforest.net/user/behzadg?ref=behzadg">Themeforest</a>.</span>
-			<div id="toTop"><i class="icon-angle-up"></i></div><!-- Back to top -->
+			<span class="copyright">© 2013 by
+				<a href="http://theme20.com/">Theme20</a>. All Rights Reserved. Powered by
+				<a href="http://themeforest.net/user/behzadg?ref=behzadg">Themeforest</a>.</span>
+			<div id="toTop">
+				<i class="icon-angle-up"></i>
+			</div>
+			<!-- Back to top -->
 
 			<div class="foot-menu">
 				<ul>
-					<li><a href="index-2.html">Home</a></li>
-					<li><a href="mp3s.html">MP3</a></li>
-					<li><a href="videos.html">Video</a></li>
-					<li><a href="gallery.html">Photo Gallery</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul><!-- end links -->
-			</div><!-- end foot menu -->
-		</div><!-- row -->
-	</div><!-- end last -->
+					<li>
+						<a href="index-2.html">Home</a>
+					</li>
+					<li>
+						<a href="mp3s.html">MP3</a>
+					</li>
+					<li>
+						<a href="videos.html">Video</a>
+					</li>
+					<li>
+						<a href="gallery.html">Photo Gallery</a>
+					</li>
+					<li>
+						<a href="blog.html">Blog</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+				<!-- end links -->
+			</div>
+			<!-- end foot menu -->
+		</div>
+		<!-- row -->
+	</div>
+	<!-- end last -->
 
-</footer><!-- end footer -->
-<script type="text/javascript">	
-/* <![CDATA[ */
-	jQuery(document).ready(function() {
-		jQuery('.tp-banner').revolution({
-			delay:9000,
-			startwidth:1060,
-			startheight:610,
-			hideThumbs:10,
-			navigationType:"off",
-			fullWidth:"on",
-			forceFullWidth:"on"
-		});
-		jQuery("#event1").countdown({
-			date: "31 December 2017 23:59:59",
-			format: "on"
-		},
-		function() {
-			// callback function
-		});
-	});
-/* ]]> */
-</script>
-</body>
-</html>
-
-
+</footer>
+<!-- end footer -->

@@ -1,0 +1,16 @@
+  <div class="row row-fluid clearfix mbf">
+      <div class="span5">
+        <div class="def-block">
+          <h4> Login </h4><span class="liner"></span>
+          <form (submit)="onLoginSubmit($event)">
+          <input type="text" [(ngModel)]="email" name="email" onfocus="if (this.value=='Votre email') this.value = '';" onblur="if (this.value=='') this.value = 'Votre email';" value="Votre email" placeholder="Votre email">
+          <input type="password" [(ngModel)]="password" name="password" onfocus="if (this.value=='password') this.value = '';" onblur="if (this.value=='') this.value = 'password';" value="password" placeholder="password">
+          <input type="submit" class="btn btn-primary" value="Sing In">
+          <a routerLink="/register"  class="tbutton color2 small"><span>Register</span></a>
+          </form>
+        </div><!-- def block -->
+      </div><!-- span8 news -->
+  </div>
+
+
+

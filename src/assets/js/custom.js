@@ -196,6 +196,7 @@ jQuery(document).ready(function ($) {
 	// SignIn Popup
 	var popupStatus = 0;
 	$("#Login_PopUp_Link").click(function() {
+		alert("ici");
 		//Aligning our box in the middle
 		var windowWidth = document.documentElement.clientWidth;
 		var windowHeight = document.documentElement.clientHeight;

@@ -1,0 +1,21 @@
+   <div class="row row-fluid clearfix mbf">
+      <div class="span5">
+        <div class="def-block">
+          <h4> Register </h4><span class="liner"></span>
+          <form (submit)="onRegisterSubmit($event)">
+          <input type="text" [(ngModel)]="lastname" name="lastname" onfocus="if (this.value=='Votre nom') this.value = '';" onblur="if (this.value=='') this.value = 'Votre nom';" value="Votre nom" placeholder="Votre nom">
+          <input type="text" [(ngModel)]="firstname" name="firstname" onfocus="if (this.value=='Votre prénom') this.value = '';" onblur="if (this.value=='') this.value = 'Votre prénom';" value="Votre prénom" placeholder="Votre prénom">
+          <input type="text" [(ngModel)]="email" name="email" onfocus="if (this.value=='Votre email') this.value = '';" onblur="if (this.value=='') this.value = 'Votre email';" value="Votre email" placeholder="Votre email">
+          <input type="password" [(ngModel)]="password" name="password" onfocus="if (this.value=='password') this.value = '';" onblur="if (this.value=='') this.value = 'password';" value="password" placeholder="password">
+          <input type="submit" class="tbutton color2 small" value="Register">
+          </form>
+        </div><!-- def block -->
+      </div><!-- span8 news -->
+  </div>
+
+
+
+
+
+
+

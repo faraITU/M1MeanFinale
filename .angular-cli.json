@@ -26,18 +26,7 @@
         ,"assets/styles/icons/icons.css" 
       ],
       "scripts": [
-        "assets/js/jquery.min.js"                                   
-        ,"assets/js/theme20.js"                                      
-        ,"assets/bootstrap/js/bootstrap.min.js"                      
-        ,"assets/js/rs-plugin/js/jquery.themepunch.plugins.min.js"   
-        ,"assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js"
-        ,"assets/js/jquery.prettyPhoto.js"                           
-        ,"assets/js/jquery.flexslider-min.js"                        
-        ,"assets/js/jquery.jplayer.js"                               
-        ,"assets/js/ttw-music-player-min.js"                         
-        ,"assets/js/countdown.js"                                    
-        ,"assets/js/jquery.nicescroll.min.js"                        
-        ,"assets/js/custom.js"                                       
+                                            
         
       ],
       "environmentSource": "environments/environment.ts",

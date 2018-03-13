@@ -2,13 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MyApp</title>
+  <title>ReMIX</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 </head>
-<body>
+<body id="fluidGridSystem">
   <app-root></app-root>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/theme20.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>	
+	<script type="text/javascript" src="assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.jplayer.js"></script>
+	<script type="text/javascript" src="assets/js/ttw-music-player-min.js"></script> 
+	<script type="text/javascript" src="assets/js/countdown.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+  <script type="text/javascript">	
+    /* <![CDATA[ */
+      jQuery(document).ready(function() {
+        jQuery("#event1").countdown({
+          date: "31 December 2017 23:59:59",
+          format: "on"
+        },
+        function() {
+          // callback function
+        });
+      });
+    /* ]]> */
+    </script>
 </body>
 </html>
+
