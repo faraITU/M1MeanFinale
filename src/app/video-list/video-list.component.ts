@@ -10,6 +10,7 @@ import { Video } from '../video';
 })
 export class VideoListComponent implements OnInit {
 
+  videos: Array<Video>;
   public SelectVideo = new EventEmitter();
   constructor() { }
 

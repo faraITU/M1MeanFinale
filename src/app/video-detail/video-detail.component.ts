@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Video } from '../video';
 
 @Component({
   selector: 'video-detail',
@@ -8,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoDetailComponent implements OnInit {
 
-  private editTitle: boolean = false;
+  video : Video;
+  editTitle: boolean = false;
   constructor() { }
 
   ngOnInit() {
