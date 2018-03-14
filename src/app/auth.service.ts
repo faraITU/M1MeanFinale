@@ -23,12 +23,16 @@ export class AuthService {
     	return this._http.post(this._getUrl_login, newUser, {headers:headers}).map(res => res.json());
     }
     public storeUserData(user){
-    	localStorage.setItem('user', JSON.stringify(user));
+    	sessionStorage.setItem('user', JSON.stringify(user));
     	this.user = user;
     }
     public logout() {
+      if (typeof (Storage) !== 'undefined') {
         this.user = null;
-        localStorage.clear();
+        sessionStorage.removeItem("user");
+      }
     }
+
+     
 
 }

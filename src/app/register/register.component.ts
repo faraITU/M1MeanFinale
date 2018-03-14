@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   successMessage: String = '';
 
   constructor(
-    private _authService: AuthService,
+    private authService: AuthService,
     private utility: UtilityService,
     private router: Router
   ) { }
@@ -34,19 +34,9 @@ export class RegisterComponent implements OnInit {
         email: this.email,
         password: this.password
       }
-      this._authService.insertUser(user)
-      .subscribe(data => { 
-        if(data == 'success'){
-          if(typeof (Storage) !== 'undefined') {
-            sessionStorage.setItem('User',  JSON.stringify(user.email))
-          }
+      this.authService.insertUser(user)
+      .subscribe(data => {  
           this.router.navigate(['login']);
-        }
-        else{
-          this.successMessage = "Adresse ou mot de passe invalide";
-          console.log('log '+this.successMessage);
-          this.router.navigate(['login']);
-        }
       });
   }
 

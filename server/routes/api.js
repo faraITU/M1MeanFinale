@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Video = require('../models/video');
 const User = require('../models/user');
+const YouTube = require('youtube-node');
 
 const db = "mongodb://faraharimanda:harimanda50@ds259768.mlab.com:59768/videoplayer";
 mongoose.Promise = global.Promise;
@@ -34,6 +35,29 @@ router.get('/videos/:id', function(req, res){
         }else{
             res.json(video);
         }
+    });
+});
+
+router.get('/search/:title', (req, res, next) =>{
+	var youTube = new YouTube();
+	youTube.setKey('AIzaSyB1OOSpTREs85WUMvIgJvLTZKye4BVsoFU');
+	youTube.search(req.params.title, 10, function(error, result) {
+    if (error) {
+        console.log(error);
+    }else{
+        var jsonData = JSON.parse(JSON.stringify(result, null, 2));
+        var videolist=[];
+        for(var i=0;i<jsonData.items.length; i++){
+            var newVideo = new Video();
+            newVideo.title = jsonData.items[i].snippet.title;
+            newVideo.url="https://www.youtube.com/embed/"+jsonData.items[i].id.videoId;
+            newVideo.icone = jsonData.items[i].snippet.thumbnails.default.url;
+            newVideo.id = jsonData.items[i].id.videoId;
+            videolist.push(newVideo);
+           
+        }
+        res.status(200).json(videolist);
+    }
     });
 });
 
@@ -95,6 +119,7 @@ router.post('/users', function(req, res){
                     if(err){
                         console.log('Error saving user');
                     }else{
+                        console.log(insertUser);
                         res.json(insertUser);
                     }
                 });

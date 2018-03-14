@@ -13,6 +13,7 @@ import { HttpModule } from '@angular/http';
 import { SafePipe } from './safe.pipe';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { RegisterComponent } from './register/register.component';
     VideoDetailComponent,
     SafePipe,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

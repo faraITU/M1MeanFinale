@@ -2,20 +2,18 @@
 
 	<header id="header" class="glue">
 		<div class="row clearfix">
-			<div class="little-head" style="width:50%;">
-				<div id="Login_PopUp_Link" class="sign-btn tbutton small">
-					<a routerLink="/login" routerLinkActive="active"> Login </a>
+			<div class="little-head" style="width:70%;">
+					<div id="Login_PopUp_Link" class="sign-btn tbutton small">
+							<a routerLink="/logout" routerLinkActive="active"><span>Logout</span> </a>
+						</div>
+				<div id="Login_PopUp_Link" class="sign-btn tbutton small" >
+					<a routerLink="/login" routerLinkActive="active"><span>Login</span> </a>
 				</div>
-				
-
-				<div class="search" style="width:80%;">
-					<form action="http://d.theme20.com/remix_html/search.html" id="search" method="get">
-						<input id="inputhead" name="search" type="text" onfocus="if (this.value=='Rechercher') this.value = '';" onblur="if (this.value=='') this.value = 'Rechercher';"
-						 value="Rechercher" placeholder="Rechercher" style="width:100%;">
-						<button type="submit">
-							<i class="icon-search"></i>
-						</button>
-					</form>
+				<div class="search" style="width:50%;">
+					<input (keyup.enter)="onEnter()" type="text" id="inputhead" placeholder="Search" [ngModelOptions]="{standalone: true}" [(ngModel)]="motcle" style="width:100%;">
+					<button type="submit">
+						<i class="icon-search"></i>
+					</button>
 					<!-- end form -->
 				</div>
 				<!-- search -->
@@ -39,12 +37,7 @@
 							<a routerLink="/home" routerLinkActive="active">Home</a>
 						</li>
 						<li>
-							<a routerLink="/videos" routerLinkActive="active">Video</a>
-						</li>
-						<li>
-							<a href="index-2.html">Features
-								<span class="sub">remix all features</span>
-							</a>
+							<a routerLink="/videos" routerLinkActive="active">PlayList</a>
 						</li>
 					</ul>
 					<!-- end menu -->
@@ -71,9 +64,8 @@
 <footer id="footer">
 	<div class="footer-last">
 		<div class="row clearfix">
-			<span class="copyright">© 2013 by
-				<a href="http://theme20.com/">Theme20</a>. All Rights Reserved. Powered by
-				<a href="http://themeforest.net/user/behzadg?ref=behzadg">Themeforest</a>.</span>
+			<span class="copyright">© 2018 by Faratiana
+				.</span>
 			<div id="toTop">
 				<i class="icon-angle-up"></i>
 			</div>
@@ -82,22 +74,10 @@
 			<div class="foot-menu">
 				<ul>
 					<li>
-						<a href="index-2.html">Home</a>
+						<a href="/home">Home</a>
 					</li>
 					<li>
-						<a href="mp3s.html">MP3</a>
-					</li>
-					<li>
-						<a href="videos.html">Video</a>
-					</li>
-					<li>
-						<a href="gallery.html">Photo Gallery</a>
-					</li>
-					<li>
-						<a href="blog.html">Blog</a>
-					</li>
-					<li>
-						<a href="contact.html">Contact</a>
+						<a href="/videos">PlayList</a>
 					</li>
 				</ul>
 				<!-- end links -->
